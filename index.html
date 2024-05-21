@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* background-color: aqua; */
+        }
+        .box{
+            text-align: center;
+            font-size: 30px;
+            position: relative;
+            height: 500px;
+            width: 800px;
+            margin:  0 auto;
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+        }
+        button{
+            background-color: red;
+            padding: 10px 25px;
+            border-radius: 7px;
+            color: white;
+            margin-right: 20px;
+            cursor: pointer;
+
+        }
+        img{
+            margin-top: 10px;
+            height: 40px;
+            width: 40px;
+        }
+        button:hover{
+            background-color: #5656b6;
+            box-shadow: 0px 0px 9px 0px #f00606;
+        }
+        #no{
+            position: absolute;
+            top: 98px;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="flex">
+        <p>Do You Love Me? </p>
+        <img src="heart (1).png" alt="">
+        </div>
+
+        <button onclick="yes()" id="yes">Yes</button>
+        <button onmouseenter="no()" id="no">No</button>
+    </div>
+<script>
+    let x = document.getElementById("yes")
+    let y = document.getElementById("no")
+    x.style.backgroundColor="green"
+    function yes(){
+        alert("I Love you too...");
+    }
+    function no(){
+        let rnx = Math.floor(Math.random()*300);
+    let rny = Math.floor(Math.random()*300 +200);
+    rnx += "px"
+    rny += "px"
+    console.log(rnx);
+    y.style.top=rnx;
+    y.style.left=rny;
+    }
+</script>
+</body>
+</html>
